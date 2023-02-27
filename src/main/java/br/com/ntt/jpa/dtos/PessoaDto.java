@@ -9,12 +9,15 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class PessoasDto {
+public class PessoaDto {
 
     private Long id;
     private String nome;
     private String sobrenome;
     private String cpf;
     private String email;
-    private Endereco endereco;
+    private EnderecoDto endereco;
+
+    public void setEndereco(EnderecoDto enderecoDto) {
+    }
 }
