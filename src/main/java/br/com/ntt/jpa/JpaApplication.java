@@ -3,7 +3,7 @@ package br.com.ntt.jpa;
 import br.com.ntt.jpa.model.Cidade;
 import br.com.ntt.jpa.model.Endereco;
 import br.com.ntt.jpa.model.Estado;
-import br.com.ntt.jpa.model.Pessoas;
+import br.com.ntt.jpa.model.Pessoa;
 import br.com.ntt.jpa.repository.CidadeRepository;
 import br.com.ntt.jpa.repository.EnderecoRepository;
 import br.com.ntt.jpa.repository.EstadoRepository;
@@ -13,7 +13,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 @SpringBootApplication
@@ -49,7 +48,7 @@ public class JpaApplication implements CommandLineRunner {
 		Endereco endereco =	Endereco.criaNovoEndereco("rua geronimos","46","09785-100",sp,campinas);
 		enderecoRepository.save(endereco);
 
-		Pessoas pessoa = Pessoas.criaNovaPessoa("Maria","Melo","12345678-01","maria@gmail.com",endereco);
+		Pessoa pessoa = Pessoa.criaNovaPessoa("Maria","Melo","12345678-01","maria@gmail.com",endereco);
 		pessoaRepository.save(pessoa);
 	}
 

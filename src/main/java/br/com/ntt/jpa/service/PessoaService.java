@@ -1,15 +1,15 @@
 package br.com.ntt.jpa.service;
 
-import br.com.ntt.jpa.model.Pessoas;
+import br.com.ntt.jpa.dtos.PessoaDto;
 
 import java.util.List;
 
 public interface PessoaService {
 
-    List<Pessoas> findAll();
+    List<PessoaDto> findAll();
 
-     void salvarPessoa(Pessoas pessoas);
+     void salvarPessoa(PessoaDto pessoas);
 
 
-    Object buscarPessoaPorID(Long id);
+    PessoaDto buscarPessoaPorID(Long id);
 }
